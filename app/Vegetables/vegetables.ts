@@ -1,5 +1,5 @@
-export interface IProduct {
-    productId: number;
+export interface Ivegetable{
+    vegetableId: number;
     vegetableName: string;
     vegetableCode: string;
     veg: string;
