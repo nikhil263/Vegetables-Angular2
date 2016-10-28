@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {VegetableService} from './vegetables/vegetable.service'
 
 @Component({
     selector: 'pm-app',
@@ -12,7 +13,8 @@ import { Component } from '@angular/core';
            <pm-vegetables></pm-vegetables>  
         </div>
      </div>
-     `
+     `,
+     providers:[VegetableService]
 })
 export class AppComponent { 
 

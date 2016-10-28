@@ -1,10 +1,10 @@
-export interface Ivegetable{
+export interface IVegetable{
     vegetableId: number;
     vegetableName: string;
     vegetableCode: string;
-    veg: string;
-    price: number;
     description: string;
+    soldBy:Date;
+    price: number;   
     starRating: number;
     imageUrl: string;
 }

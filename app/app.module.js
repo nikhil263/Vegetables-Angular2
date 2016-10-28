@@ -9,18 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var welcome_component_1 = require('./home/welcome.component');
+var star_component_1 = require('./shared/star.component');
 var Vegetable_list_Component_1 = require('./vegetables/Vegetable-list.Component');
 var app_component_1 = require('./app.component');
 var http_1 = require('@angular/http');
+var Vegetable_Filter_Pipe_1 = require('./vegetables/Vegetable-Filter.Pipe');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, Vegetable_list_Component_1.VegetablelistComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule],
+            declarations: [app_component_1.AppComponent,
+                welcome_component_1.WelcomeComponent,
+                Vegetable_list_Component_1.VegetablelistComponent,
+                Vegetable_Filter_Pipe_1.VegetableFilterPipe,
+                star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

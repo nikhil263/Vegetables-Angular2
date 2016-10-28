@@ -9,20 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var vegetable_service_1 = require('./vegetables/vegetable.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = "Vegetable Market";
+var ProductFilterPipe = (function () {
+    function ProductFilterPipe() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'pm-app',
-            template: "<div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>                      \n            </div>\n        </nav>\n        <div class='container'>\n           <pm-vegetables></pm-vegetables>  \n        </div>\n     </div>\n     ",
-            providers: [vegetable_service_1.VegetableService]
+    ProductFilterPipe.prototype.transform = function (value, filterBy) {
+        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        return filterBy ? value.filter(function (product) {
+            return product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
+        }) : value;
+    };
+    ProductFilterPipe = __decorate([
+        core_1.Pipe({
+            name: 'productFilter'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ProductFilterPipe);
+    return ProductFilterPipe;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ProductFilterPipe = ProductFilterPipe;
+//# sourceMappingURL=product-filter.pipe.js.map

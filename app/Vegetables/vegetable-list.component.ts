@@ -1,11 +1,37 @@
-import {Component} from '@angular/core'
-
+import {Component,OnInit} from '@angular/core'
+import {IVegetable} from './vegetables'
+import {VegetableService} from './vegetable.service'
 
 @Component({
     selector:'pm-vegetables',
-    templateUrl:'app/vegetables/vegetable-list.component.html'
+    moduleId: module.id,
+    templateUrl:'vegetable-list.component.html',
+    styleUrls: ['vegetable-list.component.css']
 })
-export class VegetablelistComponent{
+export class VegetablelistComponent implements OnInit{
 
     pageTitle:string ='Vegetables';
+    listFilter:string ;
+    imageWidth: number =50;
+    imageMargin: number =2;
+    showImage: boolean = false;
+    vegetables: IVegetable[] ; 
+    errorMessage: string;
+    
+    constructor(private _vegetableService: VegetableService) {
+        
+    }
+
+    toggleImage():void{
+        this.showImage =!this.showImage;
+    }
+   ngOnInit(): void {
+        this._vegetableService.getVegetables()
+                .subscribe(v => this.vegetables = v,
+                           error => this.errorMessage = <any>error);
+    }
+
+    onRatingClicked(message:string): void{
+        this.pageTitle ='Product List: '+ message;
+    }
 }
