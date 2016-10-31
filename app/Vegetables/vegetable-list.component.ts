@@ -3,7 +3,7 @@ import {IVegetable} from './vegetables'
 import {VegetableService} from './vegetable.service'
 
 @Component({
-    selector:'pm-vegetables',
+   
     moduleId: module.id,
     templateUrl:'vegetable-list.component.html',
     styleUrls: ['vegetable-list.component.css']
@@ -11,7 +11,7 @@ import {VegetableService} from './vegetable.service'
 export class VegetablelistComponent implements OnInit{
 
     pageTitle:string ='Vegetables';
-    listFilter:string ;
+    listFilter:string;
     imageWidth: number =50;
     imageMargin: number =2;
     showImage: boolean = false;
@@ -32,6 +32,6 @@ export class VegetablelistComponent implements OnInit{
     }
 
     onRatingClicked(message:string): void{
-        this.pageTitle ='Product List: '+ message;
+        this.pageTitle ='Vegetable star clicks!: '+ message;
     }
 }

@@ -27,11 +27,10 @@ var VegetablelistComponent = (function () {
             .subscribe(function (v) { return _this.vegetables = v; }, function (error) { return _this.errorMessage = error; });
     };
     VegetablelistComponent.prototype.onRatingClicked = function (message) {
-        this.pageTitle = 'Product List: ' + message;
+        this.pageTitle = 'Vegetable star clicks!: ' + message;
     };
     VegetablelistComponent = __decorate([
         core_1.Component({
-            selector: 'pm-vegetables',
             moduleId: module.id,
             templateUrl: 'vegetable-list.component.html',
             styleUrls: ['vegetable-list.component.css']

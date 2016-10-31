@@ -5,8 +5,7 @@
     </div>
 <div class='panel-body'>  
       <div class='row'>
-    <div class='col-md-2'>Filter by:</div>
-
+    <div class='col-md-2'>Filter by vegetables:</div>
             <div class='col-md-4'>
                 <input type='text'  
                 [(ngModel)] ='listFilter'/>
@@ -14,7 +13,7 @@
 </div>
  <div class='row' >
             <div class='col-md-6'>
-               <h3> Filtered by: {{listFilter}} </h3>
+               <h3> Filtered by : {{listFilter}} </h3>
             </div>
         </div>
            <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
@@ -47,7 +46,8 @@
                   [style.width.px]='imageWidth' [style.margin.px]= 'imageMargin' *ngIf='showImage'>
                   </td>
                   <!--END-->
-                  <td> {{vegetable.vegetableName}} </td>
+                  <td> <a [routerLink] ="['/vegetable',vegetable.vegetableId]">  
+                      {{vegetable.vegetableName}} </a></td>
                    <td> {{vegetable.vegetableCode |uppercase  }} </td>
                     <td> {{vegetable.description}} </td>                    
                     <td> {{vegetable.price | currency:'USD':true:'1.2-2' }} </td>
