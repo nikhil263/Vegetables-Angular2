@@ -9,18 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var VegetableDetailComponent = (function () {
-    function VegetableDetailComponent() {
-        this.pageTitle = 'Vegetable Detail';
+var VegetableFilterPipe = (function () {
+    function VegetableFilterPipe() {
     }
-    VegetableDetailComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            templateUrl: 'vegetable-detail.component.html'
+    VegetableFilterPipe.prototype.transform = function (value, filterBy) {
+        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        return filterBy ? value.filter(function (product) {
+            return product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
+        }) : value;
+    };
+    VegetableFilterPipe = __decorate([
+        core_1.Pipe({
+            name: 'vegetableFilter'
         }), 
         __metadata('design:paramtypes', [])
-    ], VegetableDetailComponent);
-    return VegetableDetailComponent;
+    ], VegetableFilterPipe);
+    return VegetableFilterPipe;
 }());
-exports.VegetableDetailComponent = VegetableDetailComponent;
-//# sourceMappingURL=vegetables-detail-component.js.map
+exports.VegetableFilterPipe = VegetableFilterPipe;
+//# sourceMappingURL=product-filter.pipe.js.map
