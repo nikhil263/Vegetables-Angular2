@@ -17,7 +17,6 @@ import {StarComponent} from './shared/star.component';
   imports: [ BrowserModule,
   HttpModule,
   FormsModule,
- // MaterialModule.forRoot(),
   RouterModule.forRoot([     
       { path: 'vegetables', component: VegetablelistComponent },
       { path: 'vegetable/:id', component: VegetableDetailComponent },

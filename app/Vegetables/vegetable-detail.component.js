@@ -41,4 +41,4 @@ var VegetableDetailComponent = (function () {
     return VegetableDetailComponent;
 }());
 exports.VegetableDetailComponent = VegetableDetailComponent;
-//# sourceMappingURL=vegetable-detail.component.js.map
+//# sourceMappingURL=vegetable-detail.Component.js.map

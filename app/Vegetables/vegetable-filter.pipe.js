@@ -27,4 +27,4 @@ var VegetableFilterPipe = (function () {
     return VegetableFilterPipe;
 }());
 exports.VegetableFilterPipe = VegetableFilterPipe;
-//# sourceMappingURL=vegetable-filter.pipe.js.map
+//# sourceMappingURL=Vegetable-Filter.Pipe.js.map

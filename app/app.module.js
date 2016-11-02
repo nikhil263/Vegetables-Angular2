@@ -27,7 +27,6 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 forms_1.FormsModule,
-                // MaterialModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     { path: 'vegetables', component: vegetable_list_Component_1.VegetablelistComponent },
                     { path: 'vegetable/:id', component: vegetable_detail_Component_1.VegetableDetailComponent },
