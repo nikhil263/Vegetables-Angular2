@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class WelcomeComponent {
     public pageTitle: string = 'Welcome';
+    public Author: string ='Nikhil Pratap';
 }

@@ -1,0 +1,49 @@
+<h1>{{pageTitle}}</h1>
+
+<form (ngSubmit)="addVegetable()" class="form-horizontal">
+	<div class="form-group">
+		<label for="name" class="col-lg-2 control-label">Vegetable Name</label>
+		<div class="col-lg-10">
+			<input type="text" class="form-control" required [(ngModel)]="vegetable.vegetableName" name="vegetableName" #name="ngModel">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="code" class="col-lg-2 control-label">Vegetable Code</label>
+		<div class="col-lg-10">
+			<input type="text" class="form-control" required [(ngModel)]="vegetable.vegetableCode" name="vegetableCode">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="description" class="col-lg-2 control-label">Description</label>
+		<div class="col-lg-10">
+			<input type="text" class="form-control" required [(ngModel)]="vegetable.description" name="description">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="soldBy" class="col-lg-2 control-label"> Sold By</label>
+		<div class="col-lg-10">
+			<input type="date" class="form-control" required [(ngModel)]="vegetable.soldBy" name="soldBy">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="Price" class="col-lg-2 control-label">Price </label>
+		<div class="col-lg-10">
+			<input type="number" min="0.01" step="0.01" max="2500" class="form-control" required [(ngModel)]="vegetable.price" name="Price">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="starRating" class="col-lg-2 control-label">Star Rating</label>
+		<div class="col-lg-10">
+			<input type="number" min="1" max="5" class="form-control" required [(ngModel)]="vegetable.starRating" name="starRating">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="imageUrl" class="col-lg-2 control-label">Vegetable URL </label>
+		<div class="col-lg-10">
+			<input type="text" class="form-control" required [(ngModel)]="vegetable.imageUrl" name="imageUrl">
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-default" (click)="addVegetable">Add Vegetable</button>
+</form>

@@ -19,6 +19,7 @@ var vegetable_list_Component_1 = require('./vegetables/vegetable-list.Component'
 var vegetable_detail_Component_1 = require('./vegetables/vegetable-detail.Component');
 var Vegetable_Filter_Pipe_1 = require('./vegetables/Vegetable-Filter.Pipe');
 var star_component_1 = require('./shared/star.component');
+var vegetable_create_component_1 = require('./vegetables/vegetable-create.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,6 +40,7 @@ var AppModule = (function () {
                 vegetable_list_Component_1.VegetablelistComponent,
                 vegetable_detail_Component_1.VegetableDetailComponent,
                 Vegetable_Filter_Pipe_1.VegetableFilterPipe,
+                vegetable_create_component_1.VegetableCreateComponent,
                 star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
