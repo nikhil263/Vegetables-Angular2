@@ -12,15 +12,17 @@ import {VegetablelistComponent} from './vegetables/vegetable-list.Component';
 import {VegetableDetailComponent} from './vegetables/vegetable-detail.Component';
 import {VegetableFilterPipe} from './vegetables/Vegetable-Filter.Pipe';
 import {StarComponent} from './shared/star.component';
+import {VegetableCreateComponent} from './vegetables/vegetable-create.component';
+
 
 @NgModule({
   imports: [ BrowserModule,
   HttpModule,
   FormsModule,
-  //MaterialModule.forRoot(),
   RouterModule.forRoot([     
       { path: 'vegetables', component: VegetablelistComponent },
       { path: 'vegetable/:id', component: VegetableDetailComponent },
+      { path: 'AddVegetables', component: VegetableCreateComponent},
        { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
@@ -30,6 +32,7 @@ import {StarComponent} from './shared/star.component';
    VegetablelistComponent,
    VegetableDetailComponent,
    VegetableFilterPipe,
+   VegetableCreateComponent,
    StarComponent],
   bootstrap: [ AppComponent ]
 })

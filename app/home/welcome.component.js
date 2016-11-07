@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var WelcomeComponent = (function () {
     function WelcomeComponent() {
         this.pageTitle = 'Welcome';
+        this.Author = 'Nikhil Pratap';
     }
     WelcomeComponent = __decorate([
         core_1.Component({

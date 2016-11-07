@@ -1,3 +1,5 @@
+
+
 <div class='panel panel-primary'>
     <div class='panel-heading'>
         <!--Interpolation-->
@@ -20,7 +22,7 @@
         
  <div class='table-responsive'>
      <!--Example for Structural Directive-->
-      <table class='table' *ngIf='vegetables && vegetables.length' >
+      <table class="table table-striped table-hover " *ngIf='vegetables && vegetables.length' >
           <thead>
                     <tr>
                         <th>
@@ -39,10 +41,10 @@
           </thead>
           <tbody>
               <!--Custome Filter-->
-              <tr *ngFor = 'let vegetable of vegetables | vegetableFilter:listFilter' >
+              <tr *ngFor = 'let vegetable of vegetables | vegetableFilter:listFilter' class="active" >
                   <td>
                   <!--Property Binding-->
-                  <img [src] ='vegetable.imageUrl' [title]='vegetable.vegetableName'
+                  <img [src] ='vegetable.imageUrl' class="pull right img-thumbnail" [title]='vegetable.vegetableName'
                   [style.width.px]='imageWidth' [style.margin.px]= 'imageMargin' *ngIf='showImage'>
                   </td>
                   <!--END-->
@@ -61,6 +63,10 @@
           </tbody>
       </table>
  </div>
+<div>
+  
+ </div>
+
 </div>
 </div>
 

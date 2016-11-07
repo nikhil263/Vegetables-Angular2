@@ -27,7 +27,19 @@ var VegetableService = (function () {
     };
     VegetableService.prototype.getVegetable = function (id) {
         return this.getVegetables()
-            .map(function (products) { return products.find(function (p) { return p.vegetableId === id; }); });
+            .map(function (veg) { return veg.find(function (p) { return p.vegetableId === id; }); });
+    };
+    VegetableService.prototype.addVegetable = function (vegetable) {
+        var body = JSON.stringify(vegetable);
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this._http.post(this._productUrl, body, options)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    VegetableService.prototype.extractData = function (res) {
+        var body = res.json();
+        // return body.data || {};
     };
     VegetableService.prototype.handleError = function (error) {
         // in a real world app, we may send the server to some remote logging infrastructure

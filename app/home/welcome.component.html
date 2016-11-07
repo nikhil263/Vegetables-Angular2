@@ -1,36 +1,74 @@
 ﻿<div class="panel panel-primary">
-    <div class="panel-heading">
-        {{pageTitle}}
-    </div>
-    <div class="panel-body"  >
-        <div class="row" >
-            <img src="./app/assets/images/logo.jpg" 
-                 class="img-responsive center-block"
-                 style="max-height:300px;padding-bottom:50px"/>
-        </div>
-        <div class="row"  >
-            <div class="text-center">Developed by:</div>
-            <h3 class="text-center">Nikhil Pratap</h3>    
-        </div>
-          <!--<md-card>
-      <md-tab-group>
-        <md-tab>
-          <template md-tab-label>
-            Earth
-          </template>
-          <template md-tab-content>
-            <p>EARTH</p>
-          </template>
-        </md-tab>
-        <md-tab>
-          <template md-tab-label>
-            Fire
-          </template>
-          <template md-tab-content>
-            <p>FIRE</p>
-          </template>
-        </md-tab>
-      </md-tab-group>
-    </md-card>-->
-    </div>
-</div>
+	<div class="panel-heading">
+		{{pageTitle}}
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<img src="./app/assets/images/logo.jpg" class="img-responsive center-block" style="max-height:300px;padding-bottom:50px"
+			/>
+		</div>
+		<div class="row">
+			<div class="text-center">Developed by:</div>
+			<h3 class="text-center">Nikhil Pratap</h3>
+		</div>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#formTab" data-toggle="tab">Welcome</a></li>
+			<li><a href="#topSkillsTab" data-toggle="tab">Top Skills</a></li>
+			<li><a href="#resumeTab" data-toggle="tab">Resume</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="well tab-pane active" id="formTab">
+				<div class="well">
+					<h5><strong> Thanks for visiting this website.</strong></h5>
+					<br />
+					<p>
+						This web application was developed during 3rd October 2016 to 25th November 2016. This web application developed using all
+						<strong>Latest and Cutting Edge technology Angular -2, Angular-CLI, Bootstrap, etc.</strong>
+					</p>
+					<p>
+						Please <strong>resize the browser</strong> to see <strong>Responsive Web Design (RWD)</strong> in action.
+					</p>
+					<p>
+						<strong>Github Page:</strong> <a href="https://github.com/nikhil263">Nikhil@GitHub</a>
+					</p>
+					<p>
+						Thanks again.
+					</p>
+					<p>
+						<strong>{{Author}}</strong>
+					</p>
+				</div>
+			</div>
+			<div class="well tab-pane" id="topSkillsTab">
+				<div class="well">
+					<h5><strong>Top Skills and Experiences:</strong></h5> <br />
+					<ul>
+						<li>Angular JS 2.0/1.5/1.4.x/1.3.x/1.2, TypeScript, Angular CLI, SASS - 3+ Years </li>
+						<li>.NET 5.0/4.5/4.0/3.5/2.0/1.1, C#, VB.NET, JavaScript – 7+ Years </li>
+						<li>MVC 6/5/4/3, Web API, Razor 3/2/1, RWD, LESS, Bootstrape, UI/UX – 4+ Years</li>
+						<li>.Net 5/4.5/4.5.x, HTML 5, CSS 3, MVC 5/4, MVVM, Web API 1/2, Razor 2/3 – 6+ Years</li>
+						<li>Front End, UI, UX Design –5+ Years</li>
+						<li>AJAX, AJAX TK, JQuery, jQuery UI – 5+ Years</li>
+						<li>T-SQL / SQL Server / RDBMS – 6+ Years </li>
+						<li>LINQ, EF 3/4/5/6, WCF 3/4/5 - 5+ Years </li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="well tab-pane" id="resumeTab">
+				<h5><strong>Download update resume :</strong></h5> <br />
+				<div width="240px">
+					<div align="left" width="240px">
+						<div class="div_title_main" style="padding-left: 5px">Word Resume:</div>
+						<a align="center" href="" target="_blank" title="Download Upaded Resume.">
+							<img src=" /app/assets/images/resume_word.png" width="120" height="120" style="margin: 10px; border: 1px solid #999999; padding: 10px;"
+								align="middle" />
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>

@@ -19,6 +19,7 @@ var vegetable_list_Component_1 = require('./vegetables/vegetable-list.Component'
 var vegetable_detail_Component_1 = require('./vegetables/vegetable-detail.Component');
 var Vegetable_Filter_Pipe_1 = require('./vegetables/Vegetable-Filter.Pipe');
 var star_component_1 = require('./shared/star.component');
+var vegetable_create_component_1 = require('./vegetables/vegetable-create.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,10 +28,10 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 forms_1.FormsModule,
-                //MaterialModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     { path: 'vegetables', component: vegetable_list_Component_1.VegetablelistComponent },
                     { path: 'vegetable/:id', component: vegetable_detail_Component_1.VegetableDetailComponent },
+                    { path: 'AddVegetables', component: vegetable_create_component_1.VegetableCreateComponent },
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
@@ -40,6 +41,7 @@ var AppModule = (function () {
                 vegetable_list_Component_1.VegetablelistComponent,
                 vegetable_detail_Component_1.VegetableDetailComponent,
                 Vegetable_Filter_Pipe_1.VegetableFilterPipe,
+                vegetable_create_component_1.VegetableCreateComponent,
                 star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

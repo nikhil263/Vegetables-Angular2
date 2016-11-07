@@ -40,4 +40,4 @@ var VegetablelistComponent = (function () {
     return VegetablelistComponent;
 }());
 exports.VegetablelistComponent = VegetablelistComponent;
-//# sourceMappingURL=vegetable-list.component.js.map
+//# sourceMappingURL=vegetable-list.Component.js.map
