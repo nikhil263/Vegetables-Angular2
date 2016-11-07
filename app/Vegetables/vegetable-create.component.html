@@ -1,16 +1,18 @@
 <h1>{{pageTitle}}</h1>
 
-<form (ngSubmit)="addVegetable()" class="form-horizontal">
+<form (ngSubmit)="addVegetable()" class="form-horizontal" #form ="ngForm">
+
 	<div class="form-group">
 		<label for="name" class="col-lg-2 control-label">Vegetable Name</label>
 		<div class="col-lg-10">
-			<input type="text" class="form-control" required [(ngModel)]="vegetable.vegetableName" name="vegetableName" #name="ngModel">
+			<input type="text" class="form-control" required [ngModel]="vegetable.vegetableName" name="vegetableName" (ngModelChange)="vegetableNametoUpperCase($event)" #vegetableName="ngModel">
+			<div *ngIf="vegetableName.invalid && vegetableName.dirty" class="alert alert-danger"> Vegetable is Required</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group " [class.has-error] ="vegetableCode.invalid && vegetableCode.dirty" >
 		<label for="code" class="col-lg-2 control-label">Vegetable Code</label>
 		<div class="col-lg-10">
-			<input type="text" class="form-control" required [(ngModel)]="vegetable.vegetableCode" name="vegetableCode">
+			<input type="text" class="form-control" required [(ngModel)]="vegetable.vegetableCode" name="vegetableCode" #vegetableCode="ngModel">
 		</div>
 	</div>
 	<div class="form-group">
@@ -45,5 +47,6 @@
 		</div>
 	</div>
 
-	<button type="submit" class="btn btn-default" (click)="addVegetable">Add Vegetable</button>
+	<button type="submit" class="btn btn-default"  (click)="addVegetable" [disabled] = "form.invalid" >Add Vegetable</button>
+
 </form>

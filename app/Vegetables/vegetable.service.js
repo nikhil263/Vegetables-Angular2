@@ -30,7 +30,6 @@ var VegetableService = (function () {
             .map(function (veg) { return veg.find(function (p) { return p.vegetableId === id; }); });
     };
     VegetableService.prototype.addVegetable = function (vegetable) {
-        veg: IVegetable[];
         var body = JSON.stringify(vegetable);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });

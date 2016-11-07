@@ -26,7 +26,13 @@ ngOnInit() {
     starRating: null,
     imageUrl: null,
  }
+}
 
+vegetableNametoUpperCase(value:string){
+if(value.length >0)
+this.vegetable.vegetableName = value.charAt(0).toUpperCase()+ value.slice(1);
+else
+this.vegetable.vegetableName =value;
 }
 addVegetable() {            
         if (!this.vegetable) { return; }

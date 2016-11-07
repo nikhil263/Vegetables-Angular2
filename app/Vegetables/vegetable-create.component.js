@@ -30,6 +30,12 @@ var VegetableCreateComponent = (function () {
             imageUrl: null,
         };
     };
+    VegetableCreateComponent.prototype.vegetableNametoUpperCase = function (value) {
+        if (value.length > 0)
+            this.vegetable.vegetableName = value.charAt(0).toUpperCase() + value.slice(1);
+        else
+            this.vegetable.vegetableName = value;
+    };
     VegetableCreateComponent.prototype.addVegetable = function () {
         var _this = this;
         if (!this.vegetable) {
