@@ -31,6 +31,7 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     { path: 'vegetables', component: vegetable_list_Component_1.VegetablelistComponent },
                     { path: 'vegetable/:id', component: vegetable_detail_Component_1.VegetableDetailComponent },
+                    { path: 'AddVegetables', component: vegetable_create_component_1.VegetableCreateComponent },
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }

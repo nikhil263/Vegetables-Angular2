@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var vegetable_service_1 = require('./vegetable.service');
 var VegetableCreateComponent = (function () {
-    function VegetableCreateComponent(vegetableService) {
+    function VegetableCreateComponent(vegetableService, _router, _route) {
         this.vegetableService = vegetableService;
+        this._router = _router;
+        this._route = _route;
         this.pageTitle = 'Create Vegetable';
     }
     VegetableCreateComponent.prototype.ngOnInit = function () {
@@ -34,13 +37,14 @@ var VegetableCreateComponent = (function () {
         }
         this.vegetableService.addVegetable(this.vegetable)
             .subscribe(function (vegetable) { return _this.vegetable; }, function (error) { return _this.errorMessage = error; });
+        this._router.navigate(['/vegetables']);
     };
     VegetableCreateComponent = __decorate([
         core_1.Component({
             selector: 'app-create-vegetable',
             templateUrl: 'app/Vegetables/vegetable-create.component.html'
         }), 
-        __metadata('design:paramtypes', [vegetable_service_1.VegetableService])
+        __metadata('design:paramtypes', [vegetable_service_1.VegetableService, router_1.Router, router_1.ActivatedRoute])
     ], VegetableCreateComponent);
     return VegetableCreateComponent;
 }());

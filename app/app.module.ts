@@ -22,6 +22,7 @@ import {VegetableCreateComponent} from './vegetables/vegetable-create.component'
   RouterModule.forRoot([     
       { path: 'vegetables', component: VegetablelistComponent },
       { path: 'vegetable/:id', component: VegetableDetailComponent },
+      { path: 'AddVegetables', component: VegetableCreateComponent},
        { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }

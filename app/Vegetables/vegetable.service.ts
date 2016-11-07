@@ -22,11 +22,13 @@ export class VegetableService {
 
     getVegetable(id: number): Observable<IVegetable> {
         return this.getVegetables()
-            .map((products: IVegetable[]) => products.find(p => p.vegetableId === id));
+            .map((veg: IVegetable[]) => veg.find(p => p.vegetableId === id));
     }
 
- addVegetable(vegetable: IVegetable) {                
-        let body = JSON.stringify(vegetable);            
+ addVegetable(vegetable: IVegetable) {  
+        veg: IVegetable[]; 
+        let body = JSON.stringify(vegetable);  
+                  
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this._http.post(this._productUrl, body, options)
