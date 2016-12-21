@@ -17,6 +17,7 @@ var VegetablelistComponent = (function () {
         this.imageWidth = 50;
         this.imageMargin = 2;
         this.showImage = false;
+        this.state = 'extra-large';
     }
     VegetablelistComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
@@ -33,7 +34,18 @@ var VegetablelistComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'vegetable-list.component.html',
-            styleUrls: ['vegetable-list.component.css']
+            styleUrls: ['vegetable-list.component.css'],
+            animations: [
+                core_1.trigger('myTrigger', [
+                    core_1.state('small', core_1.style({
+                        transform: 'scale(1)'
+                    })),
+                    core_1.state('large', core_1.style({
+                        transform: 'scale(1.4)'
+                    })),
+                    core_1.transition('small =>large', core_1.animate('500ms ease-in')),
+                    core_1.transition('large =>small', core_1.animate('500ms'))
+                ])]
         }), 
         __metadata('design:paramtypes', [vegetable_service_1.VegetableService])
     ], VegetablelistComponent);

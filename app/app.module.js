@@ -20,6 +20,9 @@ var vegetable_detail_Component_1 = require('./vegetables/vegetable-detail.Compon
 var Vegetable_Filter_Pipe_1 = require('./vegetables/Vegetable-Filter.Pipe');
 var star_component_1 = require('./shared/star.component');
 var vegetable_create_component_1 = require('./vegetables/vegetable-create.component');
+var howto_component_1 = require('./howto/howto.component');
+var examples_component_1 = require('./examples/examples.component');
+//https://github.com/HNeukermans/Ng2a.Frontend/blob/master/src/app/domain/auth.provider.ts
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,6 +36,8 @@ var AppModule = (function () {
                     { path: 'vegetable/:id', component: vegetable_detail_Component_1.VegetableDetailComponent },
                     { path: 'AddVegetables', component: vegetable_create_component_1.VegetableCreateComponent },
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+                    { path: 'howto', component: howto_component_1.HowtoComponent },
+                    { path: 'examples', component: examples_component_1.ExamplesComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
                 ])],
@@ -42,6 +47,8 @@ var AppModule = (function () {
                 vegetable_detail_Component_1.VegetableDetailComponent,
                 Vegetable_Filter_Pipe_1.VegetableFilterPipe,
                 vegetable_create_component_1.VegetableCreateComponent,
+                howto_component_1.HowtoComponent,
+                examples_component_1.ExamplesComponent,
                 star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

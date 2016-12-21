@@ -1,4 +1,4 @@
-import {Component,OnInit} from '@angular/core'
+import {Component,OnInit,trigger,state,transition,animate,keyframes,style} from '@angular/core'
 import {IVegetable} from './vegetables'
 import {VegetableService} from './vegetable.service'
 
@@ -6,7 +6,19 @@ import {VegetableService} from './vegetable.service'
    
     moduleId: module.id,
     templateUrl:'vegetable-list.component.html',
-    styleUrls: ['vegetable-list.component.css']
+    styleUrls: ['vegetable-list.component.css'],
+    animations :[ 
+        trigger('myTrigger',[
+            
+            state('small',style({
+                transform: 'scale(1)'
+            })),
+            state('large',style({
+                transform: 'scale(1.4)'
+            })),
+            transition('small =>large',animate('500ms ease-in')),
+            transition('large =>small',animate('500ms'))
+        ])]
 })
 export class VegetablelistComponent implements OnInit{
 
@@ -17,7 +29,7 @@ export class VegetablelistComponent implements OnInit{
     showImage: boolean = false;
     vegetables: IVegetable[] ; 
     errorMessage: string;
-    
+    state:string= 'extra-large';
     constructor(private _vegetableService: VegetableService) {
         
     }

@@ -14,6 +14,10 @@ import {VegetableFilterPipe} from './vegetables/Vegetable-Filter.Pipe';
 import {StarComponent} from './shared/star.component';
 import {VegetableCreateComponent} from './vegetables/vegetable-create.component';
 
+import { HowtoComponent } from './howto/howto.component';
+import { ExamplesComponent } from './examples/examples.component';
+
+//https://github.com/HNeukermans/Ng2a.Frontend/blob/master/src/app/domain/auth.provider.ts
 
 @NgModule({
   imports: [ BrowserModule,
@@ -24,6 +28,8 @@ import {VegetableCreateComponent} from './vegetables/vegetable-create.component'
       { path: 'vegetable/:id', component: VegetableDetailComponent },
       { path: 'AddVegetables', component: VegetableCreateComponent},
        { path: 'welcome', component: WelcomeComponent },
+        { path: 'howto', component: HowtoComponent },
+       { path: 'examples', component: ExamplesComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]) ],
@@ -33,6 +39,8 @@ import {VegetableCreateComponent} from './vegetables/vegetable-create.component'
    VegetableDetailComponent,
    VegetableFilterPipe,
    VegetableCreateComponent,
+   HowtoComponent,
+   ExamplesComponent,
    StarComponent],
   bootstrap: [ AppComponent ]
 })

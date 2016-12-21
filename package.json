@@ -1,8 +1,8 @@
 {
-  "name": "product-management",
+  "name": "vegetable-management",
   "version": "1.0.0",
-  "author": "Deborah Kurata",
-  "description": "Package for the Acme Product Management sample application",
+  "author": "Nikhil Pratap",
+  "description": "Package for the Vegetable Management sample application",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "tsc": "tsc",
@@ -29,9 +29,11 @@
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.27",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.6.23",
+    "adal-angular": "1.0.10"
   },
   "devDependencies": {
+    "@types/adal": "^1.0.22",
     "concurrently": "^2.2.0",
     "lite-server": "^2.2.0",
     "tslint": "^3.7.4",
